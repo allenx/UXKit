@@ -9,7 +9,7 @@
 import Foundation
 
 #if os(OSX)
-    public typealias UXEdgeInsets = NSEdgeInsets
+    public typealias UXEdgeInsets = EdgeInsets
 #elseif os(iOS)
     public typealias UXEdgeInsets = UIEdgeInsets
 #endif

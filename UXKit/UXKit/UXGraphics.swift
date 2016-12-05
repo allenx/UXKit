@@ -9,13 +9,13 @@
 import Foundation
 import CoreGraphics
 
-public func UXGraphicsGetCurrentContext() -> CGContextRef {
+public func UXGraphicsGetCurrentContext() -> CGContext {
 
     #if os(iOS)
     return UIGraphicsGetCurrentContext()
     #endif
     
     #if os(OSX)
-    return NSGraphicsContext.currentContext()!.CGContext as CGContextRef
+    return NSGraphicsContext.current()!.cgContext as CGContext
     #endif
 }
